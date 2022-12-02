@@ -1,106 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace ExerciceEvaluation;
-
-class Program
+namespace windowsform
 {
-    class Etudiant
+    internal static class Program
     {
-        private char nom;
-        private char prenom;
-        private int Numeroetudiant;
-    }
-    class Evaluation
-    {
-        private int datedebut;
-        private int datefin;
-    }
-    class Question
-    {
-        private float nbr;
-    }
-    class Qsm : Question
-    {
-        private int nbquestion;
-    }
-    class QuestionOvert : Question
-    {
-        private int NBQUESTION;
-    }
-    class Alternation
-    {
-        private string choix1;
-        private string choix2;
-        private string choix3;
-    }
-    class SeulChoix : Alternation
-    {
-
-    }
-    class MultiChoix : Alternation
-    {
-
-    }
-    class reponse
-    {
-        private char choix;
-        public char Verifreponse()
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            return choix;
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
+            Application.Run(new Form2());
+            Application.Run(new Form3());
+            Application.Run(new Form4());
         }
-    }
-
-    class degredeCertitude
-    {
-        private int degre;
-
-        public int verifiDegre()
-        {
-            return degre;
-        }
-    }
-    class Passur
-    {
-
-    }
-    class TresSur
-    {
-
-    }
-    class Sur
-    {
-
-    }
-    class noteperdue
-    {
-        private float note;
-        public void PerduNote()
-        {
-
-        }
-    }
-    class notegagne
-    {
-        private float note;
-        public void ajouteNote()
-        {
-
-        }
-    }
-    class noteFinal
-    {
-        public float note;
-        public float calculdunote()
-        {
-            return note;
-        }
-    }
-    static void Main(string[] args)
-    {
     }
 }
